@@ -186,6 +186,15 @@ func (c *BoundContract) Transact(opts *TransactOpts, method string, params ...in
 	return c.transact(opts, &c.address, input)
 }
 
+func (c *BoundContract) EstimateGas(opts *TransactOpts, method string, params ...interface{}) (gas uint64, err error) {
+	input, err := c.abi.Pack(method, params...)
+	if err != nil {
+		return 0, err
+	}
+	msg := ethereum.CallMsg{From: opts.From, To:&c.address, Value: opts.Value, Data: input}
+	return c.transactor.EstimateGas(ensureContext(opts.Context), msg)
+}
+
 // RawTransact initiates a transaction with the given raw calldata as the input.
 // It's usually used to initiate transactions for invoking **Fallback** function.
 func (c *BoundContract) RawTransact(opts *TransactOpts, calldata []byte) (*types.Transaction, error) {
