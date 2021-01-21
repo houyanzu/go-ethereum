@@ -21,7 +21,7 @@ package geth
 import (
 	"errors"
 
-	ethereum "github.com/houyanzu/go-ethereum"
+	"github.com/houyanzu/go-ethereum"
 	"github.com/houyanzu/go-ethereum/common"
 )
 
