@@ -21,10 +21,10 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/ethdb"
+	"github.com/houyanzu/go-ethereum/common"
+	"github.com/houyanzu/go-ethereum/core/rawdb"
+	"github.com/houyanzu/go-ethereum/crypto"
+	"github.com/houyanzu/go-ethereum/ethdb"
 	checker "gopkg.in/check.v1"
 )
 

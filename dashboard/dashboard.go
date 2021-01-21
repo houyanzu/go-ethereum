@@ -35,10 +35,10 @@ import (
 
 	"io"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/houyanzu/go-ethereum/log"
+	"github.com/houyanzu/go-ethereum/p2p"
+	"github.com/houyanzu/go-ethereum/params"
+	"github.com/houyanzu/go-ethereum/rpc"
 	"github.com/mohae/deepcopy"
 	"golang.org/x/net/websocket"
 )

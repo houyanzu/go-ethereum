@@ -25,16 +25,16 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/houyanzu/go-ethereum"
+	"github.com/houyanzu/go-ethereum/common"
+	"github.com/houyanzu/go-ethereum/consensus/ethash"
+	"github.com/houyanzu/go-ethereum/core"
+	"github.com/houyanzu/go-ethereum/core/rawdb"
+	"github.com/houyanzu/go-ethereum/core/types"
+	"github.com/houyanzu/go-ethereum/crypto"
+	"github.com/houyanzu/go-ethereum/eth"
+	"github.com/houyanzu/go-ethereum/node"
+	"github.com/houyanzu/go-ethereum/params"
 )
 
 // Verify that Client implements the ethereum interfaces.

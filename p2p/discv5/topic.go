@@ -23,8 +23,8 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/houyanzu/go-ethereum/common/mclock"
+	"github.com/houyanzu/go-ethereum/log"
 )
 
 const (
