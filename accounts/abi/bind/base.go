@@ -174,6 +174,15 @@ func (c *BoundContract) Transact(opts *TransactOpts, method string, params ...in
 	return c.transact(opts, &c.address, input)
 }
 
+func (c *BoundContract) EstimateGas(opts *TransactOpts, method string, params ...interface{}) (gas uint64, err error) {
+	input, err := c.abi.Pack(method, params...)
+	if err != nil {
+		return 0, err
+	}
+	msg := ethereum.CallMsg{From: opts.From, To:&c.address, Value: opts.Value, Data: input}
+	return c.transactor.EstimateGas(ensureContext(opts.Context), msg)
+}
+
 // Transfer initiates a plain transaction to move funds to the contract, calling
 // its default method if one is available.
 func (c *BoundContract) Transfer(opts *TransactOpts) (*types.Transaction, error) {
