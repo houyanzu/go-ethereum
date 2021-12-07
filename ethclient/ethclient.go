@@ -456,6 +456,12 @@ func (ec *Client) PendingNonceAt(ctx context.Context, account common.Address) (u
 	return uint64(result), err
 }
 
+func (ec *Client) LatestNonceAt(ctx context.Context, account common.Address) (uint64, error) {
+	var result hexutil.Uint64
+	err := ec.c.CallContext(ctx, &result, "eth_getTransactionCount", account, "latest")
+	return uint64(result), err
+}
+
 // PendingTransactionCount returns the total number of transactions in the pending state.
 func (ec *Client) PendingTransactionCount(ctx context.Context) (uint, error) {
 	var num hexutil.Uint
